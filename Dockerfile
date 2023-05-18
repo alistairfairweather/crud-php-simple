@@ -19,8 +19,5 @@ COPY . /var/www/html
 # Set the working directory
 WORKDIR /var/www/html
 
-# Generate the optimized autoloader
-RUN composer dump-autoload --optimize
-
 # Set file permissions
 RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache
