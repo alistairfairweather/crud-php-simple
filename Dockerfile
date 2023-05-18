@@ -19,10 +19,6 @@ COPY . /var/www/html
 # Set the working directory
 WORKDIR /var/www/html
 
-# Install PHP dependencies - you will need to create a composer.json file - see https://getcomposer.org/doc/01-basic-usage.md
-# RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
-# RUN composer install --no-scripts --no-autoloader
-
 # Generate the optimized autoloader
 RUN composer dump-autoload --optimize
 
